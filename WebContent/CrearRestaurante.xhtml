@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:body>
+	<h:form>
+		<h:outputLabel value="Ingresar el nombre"/>
+		<h:inputText value="#{controladorRestaurante.nombre}"/><br/>
+		<h:outputLabel value="Ingresar el direccion"/>
+		<h:inputText value="#{controladorRestaurante.direccion}"/><br/>
+		<h:outputLabel value="Ingresar el telefono"/>
+		<h:inputText value="#{controladorRestaurante.telefono}"/><br/>
+
+		<h:commandButton value="Ingresar" action="#{controladorRestaurante.crearRestaurante}">
+            <f:ajax render="mensaje"/>
+        </h:commandButton><br/>
+
+     
+		<h:outputLabel id="mensaje" value="#{controladorRestaurante.mensaje}"/><br/>
+		
+	</h:form>
+</h:body>
+</html>
